@@ -1,0 +1,122 @@
+@font-face{
+     font-family: PingFang-Regular;
+     src:url('../font/PingFang-Regular.ttf');
+}
+*{margin:0;padding:0;}
+body { font-size: 13px; line-height: 130%; padding: 60px }
+.logo{
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  z-index: 99;
+  opacity: 1;
+}
+.logo .logo_icon{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-image: url(../images/logo@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.bg-content{
+  width:100%;
+  height:100%;
+  min-width:1100px;
+  position:fixed;
+  top:0;
+  left:0;
+  background-image:url(../images/bg.jpg);display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bg-content .content{
+  width:1100px; height:600px;
+}
+.content .left{ float: left;}
+.content .left h3{
+  font-family:'PingFang-Regular'; color:white; font-size:36px; line-height:30px; margin-top: 60px;font-weight:normal;
+}
+.content .left h3{
+  font-family:'PingFang-Regular'; color:white; font-size:36px; line-height:30px; margin-top: 60px;font-weight:normal;
+}
+.content .left .paragraph{
+  font-family:'PingFang-Regular'; font-size:24px; color:white; line-height:40px; width:700px; margin-top:30px; font-weight:normal;
+}
+.content .left .download{clear:both; margin-top:70px;}
+.content .left .download .ios,.content .left .download .android, .download_group .android{
+  border:1px solid #fff; border-radius:15px; padding:10px; float:left; width:220px; margin-right: 20px;font-family:'PingFang-Regular';
+}
+
+.content .right{
+  background-image:url(../images/iphone.png); float:right; height:100%; width:298px;
+}
+.content .right img{
+  width: 263px;
+  margin-top: 55px;
+  margin-left: 18px;
+}
+
+#menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 70;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  font-size: 1.1em
+}
+
+#menu li {
+  display: inline-block;
+  margin: 10px 0
+}
+
+#menu a {
+  color: #fff;
+  padding: 0 1.1em 1.1em
+}
+
+.menu-active {
+  font-weight: 700
+}
+
+#menu-theme-mobile,.menu-sub {
+  display: none
+}
+
+.menu-sub li {
+  display: block
+}
+
+.page_1 .slogan{
+  text-align: center;
+  line-height: 70px;
+  font-size: 70px;
+  color: #ffffff;
+}
+.page_1 .download_group{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.page_3 {
+  height: 460px;
+}
+.page_3 .company{
+  font-size: 35px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+.page_3 .address{
+  margin-top: 90px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: lighter;
+}

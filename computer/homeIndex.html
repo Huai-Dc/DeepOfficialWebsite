@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/js/fullPage.js-master/dist/fullpage.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-content">
+<div class="logo"><i class="logo_icon"></i></div>
+<ul id="menu">
+    <li data-menuanchor="firstPage"><a href="#firstPage" rel="noopener">首页</a></li>
+    <li data-menuanchor="secondPage"><a href="#examples" class="show-examples">产品介绍</a></li>
+    <li data-menuanchor="3rdPage"><a href="#examples" class="show-examples">联系我们</a></li>
+    <li data-menuanchor="4thpage"><a href="#examples" class="show-examples">下载</a></li>
+</ul>
+<div id="fullpage">
+    <div class="section">
+        <div class="page_1" style="height: 200px">
+            <div class="slogan">
+                “ DEEP,有深度的社交。 ”
+            </div>
+            <div class="download_group">
+                <div class="android" style="display: flex; align-items: center; float: none;">
+                    <img style="float:left; margin-right:20px;" alt="" src="../assets/images/android@1x.png"/>
+                    <div style="float:left; color:white;">
+                        <p style="font-size:20px;">安卓客户端下载</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="page_2">
+
+        </div>
+    </div>
+    <div class="section">
+        <div class="page_3">
+            <div class="company">
+                “ <i class="logo"></i>
+                厦门蒙友互联软件有限公司 ”
+            </div>
+            <div class="address">
+                <span>地址：厦门市软件园三期A区A01栋1201单元</span>
+            </div>
+        </div>
+    </div>
+    <div class="section">Some section</div>
+</div>
+<script src="../assets/js/jquery-1.11.3.min.js"></script>
+<script src="../assets/js/fullPage.js-master/dist/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        //options here
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+        menu: '#menu',
+        autoScrolling:true,
+        scrollHorizontally: true
+    });
+</script>
+</body>
+</html>

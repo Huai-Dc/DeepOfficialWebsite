@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep，有深度的社交</title>
+    <link rel="stylesheet" href="../assets/js/dist/css/swiper.min.css">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/dist/js/swiper.min.js"></script>
+    <style>
+        @font-face{
+            font-family: PingFang-Regular;
+            src:url('../assets/font/PingFang-Regular.ttf');
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            background-image: url("../assets/images/login_ground_glass.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5rem;
+        }
+
+        .logo > img {
+            width: 6rem;
+            height: 1.63rem;
+        }
+
+        .swiper-container {
+            width: 100%;
+            margin: 0 auto
+        }
+
+        .swiper-container > .swiper-wrapper > .swiper-slide {
+            overflow: hidden;
+            width: 10rem;
+        }
+
+        .swiper-container > .swiper-wrapper > .swiper-slide > img {
+            width: 10rem;
+            display: block
+        }
+
+        .button {
+            width: 8rem;
+            height: 2.7rem;
+            background: transparent;
+            border: 1px solid #ffffff;
+            display: flex;
+            color: #FFF;
+            font-weight: inherit;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            font-size: .8rem;
+        }
+
+        .download{
+            font-family:'PingFang-Regular';
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        .describe{
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            font-size: .8rem;
+            color: #ffffff;
+        }
+        .describe .head{
+            font-family:'PingFang-Regular';
+            text-align: center;
+            font-size: 1.0rem;
+            margin-bottom: .5rem;
+        }
+        .describe p{
+            font-family:'PingFang-Regular';
+            text-indent:2em;
+        }
+
+    </style>
+    <script>
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            } else {
+                window.location.href = "../computer/index.html";
+            }
+        }
+
+        browserRedirect();
+    </script>
+</head>
+<body>
+<div class="logo">
+    <img src="../assets/images/logo@2x.png" height="95" width="350"/>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide-center none-effect"><img src="../assets/images/swiper_1.png"/></div>
+        <div class="swiper-slide"><img src="../assets/images/swiper_2.png"/></div>
+        <div class="swiper-slide"><img src="../assets/images/swiper_3.png"/></div>
+    </div>
+</div>
+<div class="download">
+    <!--<a href="#" style="text-decoration: none;">-->
+        <!--<div class="button">-->
+            <!--<img src="../assets/images/apple.png" height="25" width="25"/>-->
+            <!--<span class="line line-left">&nbsp;</span>-->
+            <!--苹果客户端下载-->
+        <!--</div>-->
+    <!--</a>-->
+    <a href="/download/deep.apk" style="text-decoration: none;">
+        <div class="button">
+            <img src="../assets/images/android.png" height="25" width="25"/>
+            <span class="line line-left">&nbsp;</span>
+            安卓客户端下载
+        </div>
+    </a>
+</div>
+<div class="describe">
+    <div class="head">
+        <span>DEEP, 有深度的社交</span>
+    </div>
+    <p class="content">
+        回忆就像照相机底片，记载着我们曾经的过往，我在我的世界里等待过一个没有答案的答案，等一个不知归期的人，一份被别人看做可笑的爱情。在那段记忆里，少了泪水，少了恨叹，多了一点点期待和奢望。你就像我的倾城时光，那些我追随你脚步的日子都是不可磨灭的回忆。而我却愿意停留在回忆那里。
+    </p>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var swiper = new Swiper('.swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            loopedSlides: 3,
+            on: {
+                progress: function (progress) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = - this.slides[i].progress;
+                        var modify = 1;
+                        if (Math.abs(slideProgress) > 1) {
+                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                        }
+                        translate = slideProgress * modify * 1 + 'px';
+                        var scale = 1 - Math.abs(slideProgress) / 6;
+                        var zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        slide.transition(transition);
+                    }
+                }
+            }
+        });
+    });
+</script>
+</html>
